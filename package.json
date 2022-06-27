@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev --port 6060",
+    "dev:edge": "OUTPUT_TYPE=edge nuxt dev --port 6060",
+    "build": "nuxt build",
+    "build:edge": "OUTPUT_TYPE=edge nuxt build",
+    "build:cloudflare": "NITRO_PRESET=cloudflare npm run build",
+    "build:cloudflare:edge": "NITRO_PRESET=cloudflare npm run build:edge",
+    "generate": "nuxt generate",
+    "generate:edge": "OUTPUT_TYPE=edge nuxt generate",
+    "preview": "nuxt preview",
+    "context:manifest": "uniform context manifest download --output ./context-manifest.json"
+  },
+  "devDependencies": {
+    "nuxt": "3.0.0-rc.4",
+    "@uniformdev/cli": "16.0.1-nuxt.159",
+    "@uniformdev/canvas": "16.0.1-nuxt.159",
+    "@uniformdev/canvas-vue": "16.0.1-nuxt.159",
+    "@uniformdev/context": "16.0.1-nuxt.159",
+    "@uniformdev/context-vue": "16.0.1-nuxt.159",
+    "@uniformdev/uniform-nuxt": "16.0.1-nuxt.159"
+  }
+}
