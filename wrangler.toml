@@ -1,0 +1,12 @@
+name = "vuejs-roadtrip-bcn"
+account_id = "ad04c5003e4984823d9454b8b7e8d6ce"
+workers_dev = true
+compatibility_date = "2022-04-07"
+main = ".output/server/index.mjs"
+
+[site]
+bucket = ".output/public"
+
+[build]
+command = ""
+upload.format = "service-worker"

@@ -13,8 +13,14 @@ export default defineNuxtConfig({
   },
   vite: {
     optimizeDeps: {
-      include: ['rfdc', 'retry'],
+      include: ['rfdc', 'retry', 'p-throttle', 'p-retry'],
     },
+  },
+  runtimeConfig: {
+    public: {
+      contentfulSpaceId: process.env.CONTENTFUL_SPACE_ID,
+      contentfulDeliveryApiKey: process.env.CONTENTFUL_DELIVERY_API_KEY
+    }
   },
   modules: [
     [
