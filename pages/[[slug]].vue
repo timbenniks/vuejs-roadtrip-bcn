@@ -4,7 +4,6 @@ import { resolveRenderer } from '../components/componentMapping';
 const { $useComposition } = useNuxtApp();
 const { data } = await $useComposition({ slug: '/' });
 const { data: composition } = await useEnhance(data);
-
 const pageTitle = computed(() => composition.value?._name);
 </script>
 

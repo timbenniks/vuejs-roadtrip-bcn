@@ -14,7 +14,6 @@ export async function useEnhance(composition: Ref<CompositionAPIResponse>) {
     });
 
     return compositionClone
-
   });
 
   return { data, pending, error };
