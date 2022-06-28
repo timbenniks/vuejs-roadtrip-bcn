@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "dev": "nuxt dev --port 6060",
-    "dev:edge": "OUTPUT_TYPE=edge nuxt dev --port 6060",
+    "dev": "nuxt dev",
+    "dev:edge": "OUTPUT_TYPE=edge nuxt dev",
     "build": "nuxt build",
     "build:edge": "OUTPUT_TYPE=edge nuxt build",
     "build:cloudflare": "NITRO_PRESET=cloudflare yarn build",
@@ -24,6 +24,7 @@
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^15.13.1",
     "@uniformdev/canvas-contentful": "^16.1.0",
-    "contentful": "^9.1.32"
+    "contentful": "^9.1.32",
+    "vue-json-viewer": "3"
   }
 }

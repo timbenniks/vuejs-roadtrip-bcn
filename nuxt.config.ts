@@ -16,6 +16,7 @@ export default defineNuxtConfig({
       include: ['rfdc', 'retry', 'p-throttle', 'p-retry'],
     },
   },
+  css: ['@/assets/styles.css'],
   runtimeConfig: {
     public: {
       contentfulSpaceId: process.env.CONTENTFUL_SPACE_ID,

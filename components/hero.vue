@@ -6,5 +6,16 @@ defineProps<{
 </script>
 
 <template>
-  <pre>{{ component }}</pre>
+  <fieldset>
+    <legend>
+      Component: {{ component.type }} (variant:
+      {{ component.variant || 'default' }})
+    </legend>
+    <div class="code">
+      <json-viewer
+        :value="component.parameters.entry"
+        :expand-depth="8"
+      ></json-viewer>
+    </div>
+  </fieldset>
 </template>

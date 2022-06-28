@@ -14,13 +14,28 @@ const pageTitle = computed(() => composition.value?._name);
       <Title>{{ pageTitle }}</Title>
     </Head>
 
-    <Composition
-      v-if="composition"
-      :data="composition"
-      :resolve-renderer="resolveRenderer"
-    >
-      <slotContent name="components" />
-      <slotContent name="anotherSlot" />
-    </Composition>
+    <main>
+      <div class="data">
+        <json-viewer :value="composition" :expand-depth="8"></json-viewer>
+      </div>
+      <div class="content">
+        <Composition
+          v-if="composition"
+          :data="composition"
+          :resolve-renderer="resolveRenderer"
+        >
+          <h1>{{ composition.parameters.title.value }}</h1>
+          <fieldset>
+            <legend>Slot "components"</legend>
+            <SlotContent name="components" />
+          </fieldset>
+
+          <fieldset>
+            <legend>Slot "anotherSlot"</legend>
+            <SlotContent name="anotherSlot" />
+          </fieldset>
+        </Composition>
+      </div>
+    </main>
   </main>
 </template>

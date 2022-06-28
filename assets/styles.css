@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.data,
+.content {
+  width: 50%;
+  padding: 1em;
+  height: 100%;
+}
+
+.data {
+  background: #eee;
+  overflow: auto;
+  height: 100vh;
+}
+
+pre {
+  font-size: .8em;
+  font-family: monaco;
+  /* white-space: pre-wrap; */
+}
+
+fieldset {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+fieldset:last-child {
+  margin: 0;
+}
+
+legend {
+  font-weight: bold;
+}
