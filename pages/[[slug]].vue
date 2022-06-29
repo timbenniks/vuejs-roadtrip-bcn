@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-//import { resolveRenderer } from '../components/componentMapping';
-
+import { resolveRenderer } from '../components/componentMapping';
+const slug = useRoute().params?.slug;
 const { $useComposition } = useNuxtApp();
-const { data } = await $useComposition({ slug: '/' });
+const { data } = await $useComposition({ slug: `/${slug}` });
 
-//const { data: composition } = await useEnhance(data);
-const composition = computed(() => data.value.composition);
+const { data: composition } = await useEnhance(data);
+//const composition = computed(() => data.value.composition);
 
 const pageTitle = computed(() => composition.value?._name);
 </script>
@@ -21,11 +21,11 @@ const pageTitle = computed(() => composition.value?._name);
         <json-viewer :value="composition" :expand-depth="12"></json-viewer>
       </div>
       <div class="content">
-        <Composition v-if="composition" :data="composition">
+        <!-- <Composition v-if="composition" :data="composition">
           <h1>{{ composition.parameters.title.value }}</h1>
-        </Composition>
+        </Composition> -->
 
-        <!-- <Composition
+        <Composition
           v-if="composition"
           :data="composition"
           :resolve-renderer="resolveRenderer"
@@ -36,9 +36,7 @@ const pageTitle = computed(() => composition.value?._name);
             <legend>Slot "components"</legend>
             <SlotContent name="components" />
           </fieldset>
-
-          
-        </Composition> -->
+        </Composition>
       </div>
     </main>
   </main>
