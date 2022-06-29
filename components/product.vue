@@ -13,7 +13,7 @@ defineProps<{
     </legend>
     <div class="code">
       <json-viewer
-        :value="component.parameters.entry"
+        :value="component.parameters.entry.value"
         :expand-depth="8"
       ></json-viewer>
     </div>

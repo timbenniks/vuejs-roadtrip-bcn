@@ -42,3 +42,9 @@ export const contentfulEnhancer = () => {
     useBatching: false,
   });
 };
+
+export const contentfulModelCleaner = ({ parameter }) => {
+  const { fields } = parameter.value;
+  parameter.value = fields;
+  return parameter.value;
+}

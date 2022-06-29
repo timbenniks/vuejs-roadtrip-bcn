@@ -20,7 +20,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       contentfulSpaceId: process.env.CONTENTFUL_SPACE_ID,
-      contentfulDeliveryApiKey: process.env.CONTENTFUL_DELIVERY_API_KEY
+      contentfulDeliveryApiKey: process.env.CONTENTFUL_DELIVERY_API_KEY,
+      bigcommerceApiToken: process.env.BIGCOMMERCE_API_TOKEN,
+      bigcommerceStoreHash: process.env.BIGCOMMERCE_STORE_HASH
     }
   },
   modules: [
