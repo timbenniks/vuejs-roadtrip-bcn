@@ -1,9 +1,12 @@
 <script lang="ts" setup>
-import { resolveRenderer } from '../components/componentMapping';
+//import { resolveRenderer } from '../components/componentMapping';
 
 const { $useComposition } = useNuxtApp();
 const { data } = await $useComposition({ slug: '/' });
-const { data: composition } = await useEnhance(data);
+
+//const { data: composition } = await useEnhance(data);
+const composition = computed(() => data.value.composition);
+
 const pageTitle = computed(() => composition.value?._name);
 </script>
 
@@ -18,22 +21,24 @@ const pageTitle = computed(() => composition.value?._name);
         <json-viewer :value="composition" :expand-depth="12"></json-viewer>
       </div>
       <div class="content">
-        <Composition
+        <Composition v-if="composition" :data="composition">
+          <h1>{{ composition.parameters.title.value }}</h1>
+        </Composition>
+
+        <!-- <Composition
           v-if="composition"
           :data="composition"
           :resolve-renderer="resolveRenderer"
         >
           <h1>{{ composition.parameters.title.value }}</h1>
+
           <fieldset>
             <legend>Slot "components"</legend>
             <SlotContent name="components" />
           </fieldset>
 
-          <fieldset>
-            <legend>Slot "anotherSlot"</legend>
-            <SlotContent name="anotherSlot" />
-          </fieldset>
-        </Composition>
+          
+        </Composition> -->
       </div>
     </main>
   </main>

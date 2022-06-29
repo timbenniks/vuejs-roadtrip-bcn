@@ -13,12 +13,12 @@
     "context:manifest": "uniform context manifest download --output ./context-manifest.json"
   },
   "devDependencies": {
-    "@uniformdev/canvas": "16.0.1-nuxt.159",
-    "@uniformdev/canvas-vue": "16.0.1-nuxt.159",
+    "@uniformdev/canvas": "16.0.1-nuxt.166",
+    "@uniformdev/canvas-vue": "16.0.1-nuxt.166",
     "@uniformdev/cli": "16.0.1-nuxt.159",
-    "@uniformdev/context": "16.0.1-nuxt.159",
-    "@uniformdev/context-vue": "16.0.1-nuxt.159",
-    "@uniformdev/uniform-nuxt": "16.0.1-nuxt.159",
+    "@uniformdev/context": "16.0.1-nuxt.166",
+    "@uniformdev/context-vue": "16.0.1-nuxt.166",
+    "@uniformdev/uniform-nuxt": "16.0.1-nuxt.166",
     "nuxt": "3.0.0-rc.4"
   },
   "dependencies": {

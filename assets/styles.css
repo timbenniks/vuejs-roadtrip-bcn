@@ -10,6 +10,10 @@ main {
   overflow: hidden;
 }
 
+.meow {
+  background-color: antiquewhite;
+}
+
 .data,
 .content {
   width: 50vw;
@@ -32,7 +36,7 @@ pre {
 
 fieldset {
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 fieldset:last-child {
