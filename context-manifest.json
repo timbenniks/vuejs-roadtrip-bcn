@@ -23,7 +23,7 @@
           }
         },
         "vueDevelopers": {
-          "str": 50,
+          "str": 60,
           "cap": 100,
           "dur": "p",
           "crit": {
