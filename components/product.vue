@@ -17,10 +17,10 @@ const price = computed(() => props.component.parameters.entry.value.price);
     </legend>
     <h1 v-if="title">{{ title }}</h1>
     <img v-if="image" :src="image" :alt="title" width="250" />
-    <p>&euro;{{ price }}</p>
+    <p v-if="price">&euro;{{ price }}</p>
     <div class="code">
       <json-viewer
-        :value="component.parameters.entry.value"
+        :value="component.parameters.entry"
         :expand-depth="8"
       ></json-viewer>
     </div>

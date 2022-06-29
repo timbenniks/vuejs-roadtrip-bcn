@@ -2,20 +2,6 @@ import { defineNuxtConfig, type NuxtConfig } from 'nuxt';
 import manifestJson from './context-manifest.json';
 
 export default defineNuxtConfig({
-  build: {
-    transpile: [
-      '@uniformdev/uniform-nuxt',
-      '@uniformdev/canvas-vue',
-      '@uniformdev/context-vue',
-      '@uniformdev/canvas',
-      '@uniformdev/context',
-    ],
-  },
-  vite: {
-    optimizeDeps: {
-      include: ['rfdc', 'retry', 'p-throttle', 'p-retry'],
-    },
-  },
   css: ['@/assets/styles.css'],
   runtimeConfig: {
     public: {
@@ -37,4 +23,18 @@ export default defineNuxtConfig({
       },
     ],
   ],
+  build: {
+    transpile: [
+      '@uniformdev/uniform-nuxt',
+      '@uniformdev/canvas-vue',
+      '@uniformdev/context-vue',
+      '@uniformdev/canvas',
+      '@uniformdev/context',
+    ],
+  },
+  vite: {
+    optimizeDeps: {
+      include: ['rfdc', 'retry', 'p-throttle', 'p-retry'],
+    },
+  },
 });

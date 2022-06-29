@@ -2,29 +2,9 @@
   "project": {
     "pz": {
       "sig": {
-        "vueDevelopers": {
-          "str": 100,
-          "cap": 1000,
-          "dur": "p",
-          "crit": {
-            "op": "&",
-            "type": "G",
-            "clauses": [
-              {
-                "type": "QS",
-                "match": {
-                  "cs": false,
-                  "op": "=",
-                  "rhs": "vue"
-                },
-                "queryName": "utm_interest"
-              }
-            ]
-          }
-        },
         "reactDevelopers": {
-          "str": 100,
-          "cap": 1000,
+          "str": 50,
+          "cap": 100,
           "dur": "p",
           "crit": {
             "op": "&",
@@ -36,6 +16,26 @@
                   "cs": false,
                   "op": "=",
                   "rhs": "react"
+                },
+                "queryName": "utm_interest"
+              }
+            ]
+          }
+        },
+        "vueDevelopers": {
+          "str": 50,
+          "cap": 100,
+          "dur": "p",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "type": "QS",
+                "match": {
+                  "cs": false,
+                  "op": "=",
+                  "rhs": "vue"
                 },
                 "queryName": "utm_interest"
               }
