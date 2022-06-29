@@ -701,10 +701,10 @@
     p-retry "^4.6.2"
     p-throttle "^4.1.1"
 
-"@uniformdev/cli@16.0.1-nuxt.159":
-  version "16.0.1-nuxt.159"
-  resolved "https://registry.yarnpkg.com/@uniformdev/cli/-/cli-16.0.1-nuxt.159.tgz#88a79f169495dea3028d04fad98f2a19b746d167"
-  integrity sha512-/H7MavRkjS6omVQcAkw3xoPUFK7mRV6VsQfxq+eDYsrPpj49pB1WS3jqf7b8XVC0ltgAeGwB3xCtZvlhLz5uVA==
+"@uniformdev/cli@16.0.1-nuxt.166":
+  version "16.0.1-nuxt.166"
+  resolved "https://registry.yarnpkg.com/@uniformdev/cli/-/cli-16.0.1-nuxt.166.tgz#106ee52b9dfd8ad894632008ccac4d5bcf3247d7"
+  integrity sha512-oA7S+oGf2gwTjBs5/3Pvm4lrPA+lNGq0NmuAQ4NNAFrIsJsG3zqgCta5Rygnc6IBKkk5qB/ydEmUzLSLwXmvZQ==
   dependencies:
     diff "^5.0.0"
     dotenv "^16.0.1"
@@ -712,6 +712,23 @@
     lodash.isequalwith "^4.4.0"
     node-fetch "^2.6.7"
     yargs "^17.5.1"
+
+"@uniformdev/context-edge-netlify@16.0.1-nuxt.166":
+  version "16.0.1-nuxt.166"
+  resolved "https://registry.yarnpkg.com/@uniformdev/context-edge-netlify/-/context-edge-netlify-16.0.1-nuxt.166.tgz#1642780b42c6798919672acff20dafce04568f3b"
+  integrity sha512-sXlw9DSHRPxycEx5aHwYLLp7yjhEFnc0UNWBLMeEZe4ZPINS0pIw9Ze1tj2i6AFyEc5RAPyAHviiEblQlbO+gg==
+  dependencies:
+    "@uniformdev/context" "^16.0.1-nuxt.166+ce56da6c5"
+    "@uniformdev/context-edge" "^16.0.1-nuxt.166+ce56da6c5"
+    cookie "^0.5.0"
+
+"@uniformdev/context-edge@^16.0.1-nuxt.166+ce56da6c5":
+  version "16.1.0"
+  resolved "https://registry.yarnpkg.com/@uniformdev/context-edge/-/context-edge-16.1.0.tgz#41046d396fe8849729af18ffb0ac6544040f1a42"
+  integrity sha512-/kOTh2tcX3zsh1xnrte/Iu1XGnytZpUVWjzFL3tMKspla5K48wdKVe9egjxsRF5E5IKoRHbouusI4zRnRwFYFg==
+  dependencies:
+    "@uniformdev/context" "^16.1.0"
+    cookie "^0.5.0"
 
 "@uniformdev/context-vue@16.0.1-nuxt.166", "@uniformdev/context-vue@^16.0.1-nuxt.166+ce56da6c5":
   version "16.0.1-nuxt.166"
@@ -1481,6 +1498,11 @@ cookie-es@^0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/cookie-es/-/cookie-es-0.5.0.tgz#a6ad89923e68c542fc9e760b07aefa5ab020d719"
   integrity sha512-RyZrFi6PNpBFbIaQjXDlFIhFVqV42QeKSZX1yQIl6ihImq6vcHNGMtqQ/QzY3RMPuYSkvsRwtnt5M9NeYxKt0g==
+
+cookie@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.5.0.tgz#d1f5d71adec6558c58f389987c366aa47e994f8b"
+  integrity sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==
 
 core-util-is@~1.0.0:
   version "1.0.3"

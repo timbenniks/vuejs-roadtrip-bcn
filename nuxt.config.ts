@@ -1,5 +1,5 @@
-import { defineNuxtConfig, type NuxtConfig } from 'nuxt';
-import manifestJson from './context-manifest.json';
+import { defineNuxtConfig } from 'nuxt';
+import manifestJson from './lib/context/context-manifest.json';
 
 export default defineNuxtConfig({
   build: {
@@ -9,6 +9,7 @@ export default defineNuxtConfig({
       '@uniformdev/context-vue',
       '@uniformdev/canvas',
       '@uniformdev/context',
+      'contentful',
     ],
   },
   vite: {
