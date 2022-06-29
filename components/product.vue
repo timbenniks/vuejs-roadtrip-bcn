@@ -4,9 +4,9 @@ const props = defineProps<{
   component: ComponentInstance;
 }>();
 
-const image = computed(() => props.component.parameters.entry.value.image);
-const title = computed(() => props.component.parameters.entry.value.name);
-const price = computed(() => props.component.parameters.entry.value.price);
+const image = computed(() => props.component.parameters.entry?.value.image);
+const title = computed(() => props.component.parameters.entry?.value.name);
+const price = computed(() => props.component.parameters.entry?.value.price);
 </script>
 
 <template>
@@ -17,10 +17,10 @@ const price = computed(() => props.component.parameters.entry.value.price);
     </legend>
     <h1 v-if="title">{{ title }}</h1>
     <img v-if="image" :src="image" :alt="title" width="250" />
-    <p>&euro;{{ price }}</p>
+    <p v-if="price">&euro;{{ price }}</p>
     <div class="code">
       <json-viewer
-        :value="component.parameters.entry.value"
+        :value="component.parameters.entry?.value"
         :expand-depth="8"
       ></json-viewer>
     </div>
