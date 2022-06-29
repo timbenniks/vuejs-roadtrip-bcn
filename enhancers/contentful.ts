@@ -45,6 +45,12 @@ export const contentfulEnhancer = () => {
 
 export const contentfulModelCleaner = ({ parameter }) => {
   const { fields } = parameter.value;
-  parameter.value = fields;
+  const { title, image } = fields;
+
+  parameter.value = {
+    title,
+    image: image.fields.file.url
+  };
+
   return parameter.value;
 }

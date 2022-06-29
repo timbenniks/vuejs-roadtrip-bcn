@@ -15,7 +15,7 @@ const pageTitle = computed(() => composition.value?._name);
 
     <main>
       <div class="data">
-        <json-viewer :value="composition" :expand-depth="8"></json-viewer>
+        <json-viewer :value="composition" :expand-depth="12"></json-viewer>
       </div>
       <div class="content">
         <Composition

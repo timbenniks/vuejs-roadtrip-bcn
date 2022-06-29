@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "nuxt dev",
+    "dev": "yarn context:manifest && nuxt dev",
     "dev:edge": "OUTPUT_TYPE=edge nuxt dev",
     "build": "nuxt build",
     "build:edge": "OUTPUT_TYPE=edge nuxt build",

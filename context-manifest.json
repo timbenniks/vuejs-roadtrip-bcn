@@ -1,38 +1,10 @@
 {
   "project": {
     "pz": {
-      "agg": {
-        "nonTechies": {
-          "inputs": [
-            {
-              "dim": "1_mkt"
-            }
-          ]
-        },
-        "submitCallForPapers": {
-          "inputs": [
-            {
-              "dim": "callForPapers"
-            }
-          ]
-        },
-        "techies": {
-          "inputs": [
-            {
-              "dim": "1_dev"
-            }
-          ]
-        }
-      },
-      "enr": {
-        "1": {
-          "cap": 100
-        }
-      },
       "sig": {
-        "callForPapers": {
-          "str": 50,
-          "cap": 100,
+        "vueDevelopers": {
+          "str": 100,
+          "cap": 1000,
           "dur": "p",
           "crit": {
             "op": "&",
@@ -43,37 +15,35 @@
                 "match": {
                   "cs": false,
                   "op": "=",
-                  "rhs": "unfrmconf"
+                  "rhs": "vue"
                 },
-                "queryName": "utm_campaign"
+                "queryName": "utm_interest"
               }
             ]
           }
         },
-        "registrationComplete": {
+        "reactDevelopers": {
           "str": 100,
-          "cap": 100,
+          "cap": 1000,
           "dur": "p",
           "crit": {
             "op": "&",
             "type": "G",
             "clauses": [
               {
-                "type": "CK",
+                "type": "QS",
                 "match": {
                   "cs": false,
                   "op": "=",
-                  "rhs": "true"
+                  "rhs": "react"
                 },
-                "cookieName": "unfrmconf_registered"
+                "queryName": "utm_interest"
               }
             ]
           }
         }
       }
     },
-    "test": {
-      "whyAttendTest": {}
-    }
+    "test": {}
   }
 }
