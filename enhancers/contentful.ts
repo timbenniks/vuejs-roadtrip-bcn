@@ -1,7 +1,7 @@
 import { createContentfulEnhancer } from "@uniformdev/canvas-contentful";
 export { CANVAS_CONTENTFUL_PARAMETER_TYPES } from "@uniformdev/canvas-contentful";
+//import contentful from "contentful";
 import { createClient } from "contentful";
-
 export const contentfulEnhancer = () => {
   const { public: { contentfulSpaceId, contentfulDeliveryApiKey } } = useRuntimeConfig()
 

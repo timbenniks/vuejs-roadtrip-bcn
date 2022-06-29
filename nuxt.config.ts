@@ -30,7 +30,7 @@ export default defineNuxtConfig({
       '@uniformdev/context-vue',
       '@uniformdev/canvas',
       '@uniformdev/context',
-      process.env.NODE_ENV === 'production' && 'contentful',
+      //process.env.NODE_ENV === 'production' && 'contentful',
     ],
   },
   vite: {

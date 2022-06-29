@@ -20,7 +20,7 @@ const price = computed(() => props.component.parameters.entry?.value.price);
     <p v-if="price">&euro;{{ price }}</p>
     <div class="code">
       <json-viewer
-        :value="component.parameters.entry?.value"
+        :value="component.parameters.entry.value"
         :expand-depth="8"
       ></json-viewer>
     </div>

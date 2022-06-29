@@ -1,12 +1,11 @@
 <script lang="ts" setup>
-import { resolveRenderer } from '../components/componentMapping';
+//import { resolveRenderer } from '../components/componentMapping';
 const slug = useRoute().params?.slug;
 const { $useComposition } = useNuxtApp();
 const { data } = await $useComposition({ slug: `/${slug}` });
 
-const { data: composition } = await useEnhance(data);
-//const composition = computed(() => data.value.composition);
-
+//const { data: composition } = await useEnhance(data);
+const composition = computed(() => data.value.composition);
 const pageTitle = computed(() => composition.value?._name);
 </script>
 
@@ -16,32 +15,29 @@ const pageTitle = computed(() => composition.value?._name);
       <Title>{{ pageTitle }}</Title>
     </Head>
 
-    <main>
-      <div class="data">
-        <json-viewer :value="composition" :expand-depth="12"></json-viewer>
-      </div>
-      <div class="content">
-        <!-- <Composition v-if="composition" :data="composition">
-          <h1>{{ composition.parameters.title.value }}</h1>
-        </Composition> -->
+    <div class="data">
+      <json-viewer :value="composition" :expand-depth="12"></json-viewer>
+    </div>
+    <div class="content">
+      <Composition v-if="composition" :data="composition">
+        <h1>{{ composition.parameters.title.value }}</h1>
+      </Composition>
+      <!-- <Composition
+        v-if="composition"
+        :data="composition"
+        :resolve-renderer="resolveRenderer"
+      >
+        <h1>{{ composition.parameters.title.value }}</h1>
 
-        <Composition
-          v-if="composition"
-          :data="composition"
-          :resolve-renderer="resolveRenderer"
-        >
-          <h1>{{ composition.parameters.title.value }}</h1>
-
-          <fieldset>
-            <legend>Slot "components"</legend>
-            <SlotContent name="components" />
-          </fieldset>
-          <fieldset>
-            <legend>Slot "products"</legend>
-            <SlotContent name="products" />
-          </fieldset>
-        </Composition>
-      </div>
-    </main>
+        <fieldset>
+          <legend>Slot "components"</legend>
+          <SlotContent name="components" />
+        </fieldset>
+        <fieldset>
+          <legend>Slot "products"</legend>
+          <SlotContent name="products" />
+        </fieldset>
+      </Composition> -->
+    </div>
   </main>
 </template>
