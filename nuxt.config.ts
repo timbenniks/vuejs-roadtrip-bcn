@@ -9,7 +9,7 @@ export default defineNuxtConfig({
       '@uniformdev/context-vue',
       '@uniformdev/canvas',
       '@uniformdev/context',
-      'contentful',
+      process.env.NODE_ENV === 'production' && 'contentful',
     ],
   },
   vite: {
