@@ -2,6 +2,15 @@ import { defineNuxtConfig, type NuxtConfig } from 'nuxt';
 import manifestJson from './context-manifest.json';
 
 export default defineNuxtConfig({
+  build: {
+    transpile: [
+      '@uniformdev/uniform-nuxt',
+      '@uniformdev/canvas-vue',
+      '@uniformdev/context-vue',
+      '@uniformdev/canvas',
+      '@uniformdev/context',
+    ],
+  },
   vite: {
     optimizeDeps: {
       include: ['rfdc', 'retry', 'p-throttle', 'p-retry'],
@@ -13,8 +22,8 @@ export default defineNuxtConfig({
       contentfulSpaceId: process.env.CONTENTFUL_SPACE_ID,
       contentfulDeliveryApiKey: process.env.CONTENTFUL_DELIVERY_API_KEY,
       bigcommerceApiToken: process.env.BIGCOMMERCE_API_TOKEN,
-      bigcommerceStoreHash: process.env.BIGCOMMERCE_STORE_HASH
-    }
+      bigcommerceStoreHash: process.env.BIGCOMMERCE_STORE_HASH,
+    },
   },
   modules: [
     [
@@ -27,5 +36,5 @@ export default defineNuxtConfig({
         outputType: process.env.OUTPUT_TYPE,
       },
     ],
-  ]
+  ],
 });
