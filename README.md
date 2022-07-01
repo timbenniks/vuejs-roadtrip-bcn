@@ -1,6 +1,19 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 Vue.js BCN
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+
+## You need an ENV file with:
+```
+CONTENTFUL_SPACE_ID=
+CONTENTFUL_DELIVERY_API_KEY=
+CONTENTFUL_PREVIEW_API_KEY=
+
+BIGCOMMERCE_API_TOKEN=
+BIGCOMMERCE_STORE_HASH=
+
+UNIFORM_API_KEY=
+UNIFORM_PROJECT_ID=
+```
 
 ## Setup
 
