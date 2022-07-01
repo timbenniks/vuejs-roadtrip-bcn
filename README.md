@@ -52,4 +52,16 @@ Locally preview production build:
 npm run preview
 ```
 
+Push to Cloudflare workers
+```bash
+npm run build:cloudflare
+wrangler publish
+```
+
+Push to Netlify workers
+```bash
+netlify build
+netlify deploy --prod
+```
+
 Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
