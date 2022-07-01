@@ -64,4 +64,6 @@ netlify build
 netlify deploy --prod
 ```
 
+in `nuxt.config.ts` uncomment line `34` for the netlify build to work.
+
 Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
