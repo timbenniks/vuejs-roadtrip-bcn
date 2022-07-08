@@ -31,7 +31,7 @@ export default defineNuxtConfig({
       '@uniformdev/canvas',
       '@uniformdev/context',
       // uncomment this for netlify build
-      //process.env.NODE_ENV === 'production' && 'contentful',
+      // process.env.NODE_ENV === 'production' && 'contentful',
     ],
   },
   vite: {

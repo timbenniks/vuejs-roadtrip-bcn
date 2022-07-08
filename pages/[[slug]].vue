@@ -36,7 +36,6 @@ const pageTitle = computed(() => composition.value?._name);
           <legend>Slot "components"</legend>
           <SlotContent name="components" />
         </fieldset>
-        
       </Composition> -->
     </div>
   </main>
