@@ -28,13 +28,14 @@ const pageTitle = computed(() => composition.value?._name);
         :resolve-renderer="resolveRenderer"
       >
         <h1>{{ composition.parameters.title.value }}</h1>
-        <fieldset>
-          <legend>Slot "products"</legend>
-          <SlotContent name="products" />
-        </fieldset>
+
         <fieldset>
           <legend>Slot "components"</legend>
           <SlotContent name="components" />
+        </fieldset>
+        <fieldset>
+          <legend>Slot "products"</legend>
+          <SlotContent name="products" />
         </fieldset>
       </Composition>
     </div>

@@ -1,6 +1,6 @@
 [build]
   command = 'yarn generate:edge'
-  publish = '.output/public'
+  publish = 'dist'
 
 [[edge_functions]]
   path = "/*"

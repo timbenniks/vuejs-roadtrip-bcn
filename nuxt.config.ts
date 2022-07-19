@@ -29,7 +29,7 @@ export default defineNuxtConfig({
     transpile: [
 
       // uncomment this for netlify build
-      // process.env.NODE_ENV === 'production' && 'contentful',
+      process.env.NODE_ENV === 'production' && 'contentful',
     ],
   },
   // vite: {

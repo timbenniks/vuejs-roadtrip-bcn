@@ -16,10 +16,10 @@ export async function useEnhance(composition: Ref<CompositionAPIResponse>) {
         //   compose(contentfulEnhancer())),
         .parameterType(CANVAS_CONTENTFUL_PARAMETER_TYPES,
           compose(contentfulEnhancer(), contentfulModelCleaner))
+        // .parameterType(CANVAS_BIGCOMMERCE_PARAMETER_TYPES,
+        //   compose(bigcommerceEnhancer())),
         .parameterType(CANVAS_BIGCOMMERCE_PARAMETER_TYPES,
-          compose(bigcommerceEnhancer())),
-      // .parameterType(CANVAS_BIGCOMMERCE_PARAMETER_TYPES,
-      //   compose(bigcommerceEnhancer(), bigcommerceModelCleaner)),
+          compose(bigcommerceEnhancer(), bigcommerceModelCleaner)),
       context: {},
     });
 
