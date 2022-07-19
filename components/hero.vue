@@ -17,10 +17,7 @@ const title = computed(() => props.component.parameters.entry.value.title);
     <h1 v-if="title">{{ title }}</h1>
     <img v-if="image" :src="image" :alt="title" width="250" />
     <div class="code">
-      <json-viewer
-        :value="component.parameters.entry.value"
-        :expand-depth="8"
-      ></json-viewer>
+      <pre>{{ component.parameters.entry.value }}</pre>
     </div>
   </fieldset>
 </template>

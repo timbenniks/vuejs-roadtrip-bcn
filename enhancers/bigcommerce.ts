@@ -5,24 +5,45 @@ import {
 
 export { CANVAS_BIGCOMMERCE_PARAMETER_TYPES } from "@uniformdev/canvas-bigcommerce";
 
+// export const bigcommerceEnhancer = () => {
+//   const { public: { bigcommerceApiToken, bigcommerceStoreHash } } = useRuntimeConfig()
+
+//   const bigCommerceClient = createBigCommerceClient({
+//     storeHash: bigcommerceStoreHash,
+//     token: bigcommerceApiToken,
+//   });
+
+//   return createBigCommerceEnhancer({
+//     client: bigCommerceClient,
+//     createProductOptions: () => {
+//       return {
+//         include_fields: ["id", "name", "price", "description"],
+//       };
+//     },
+//     createProductQueryOptions: () => {
+//       return {
+//         include_fields: ["id", "name", "price", "description"],
+//       };
+//     },
+//   });
+// };
+
 export const bigcommerceEnhancer = () => {
   const { public: { bigcommerceApiToken, bigcommerceStoreHash } } = useRuntimeConfig()
 
-  const bigCommerceClient = createBigCommerceClient({
-    storeHash: bigcommerceStoreHash,
-    token: bigcommerceApiToken,
-  });
-
   return createBigCommerceEnhancer({
-    client: bigCommerceClient,
+    client: createBigCommerceClient({
+      storeHash: bigcommerceStoreHash,
+      token: bigcommerceApiToken,
+    }),
     createProductOptions: () => {
       return {
-        include_fields: ["id", "name", "price", "description"],
+        include_fields: ['id', 'name', 'price'],
       };
     },
     createProductQueryOptions: () => {
       return {
-        include_fields: ["id", "name", "price", "description"],
+        include_fields: ['id', 'name', 'price'],
       };
     },
   });

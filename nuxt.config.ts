@@ -1,5 +1,6 @@
 import { defineNuxtConfig } from 'nuxt';
 import manifestJson from './lib/context/context-manifest.json';
+import type { ManifestV2 } from '@uniformdev/context';
 
 export default defineNuxtConfig({
   css: ['@/assets/styles.css'],
@@ -15,28 +16,25 @@ export default defineNuxtConfig({
     [
       '@uniformdev/uniform-nuxt',
       {
-        manifest: manifestJson,
         projectId: process.env.UNIFORM_PROJECT_ID,
         readOnlyApiKey: process.env.UNIFORM_API_KEY,
         apiHost: process.env.UNIFORM_CLI_BASE_URL,
         outputType: process.env.OUTPUT_TYPE,
+        manifest: manifestJson as ManifestV2,
+        defaultConsent: true,
       },
     ],
   ],
   build: {
     transpile: [
-      '@uniformdev/uniform-nuxt',
-      '@uniformdev/canvas-vue',
-      '@uniformdev/context-vue',
-      '@uniformdev/canvas',
-      '@uniformdev/context',
+
       // uncomment this for netlify build
       // process.env.NODE_ENV === 'production' && 'contentful',
     ],
   },
-  vite: {
-    optimizeDeps: {
-      include: ['rfdc', 'retry', 'p-throttle', 'p-retry'],
-    },
-  },
+  // vite: {
+  //   optimizeDeps: {
+  //     include: ['rfdc', 'retry', 'p-throttle', 'p-retry'],
+  //   },
+  // },
 });

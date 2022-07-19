@@ -19,10 +19,7 @@ const price = computed(() => props.component.parameters.entry?.value.price);
     <img v-if="image" :src="image" :alt="title" width="250" />
     <p v-if="price">&euro;{{ price }}</p>
     <div class="code">
-      <json-viewer
-        :value="component.parameters.entry.value"
-        :expand-depth="8"
-      ></json-viewer>
+      <pre>{{ component.parameters.entry.value }}</pre>
     </div>
   </fieldset>
 </template>

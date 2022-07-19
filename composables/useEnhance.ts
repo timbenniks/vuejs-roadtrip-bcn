@@ -12,12 +12,12 @@ export async function useEnhance(composition: Ref<CompositionAPIResponse>) {
     await enhance({
       composition: compositionClone,
       enhancers: new EnhancerBuilder()
+        // .parameterType(CANVAS_CONTENTFUL_PARAMETER_TYPES,
+        //   compose(contentfulEnhancer())),
         .parameterType(CANVAS_CONTENTFUL_PARAMETER_TYPES,
-          compose(contentfulEnhancer())),
-      // .parameterType(CANVAS_CONTENTFUL_PARAMETER_TYPES,
-      //   compose(contentfulEnhancer(), contentfulModelCleaner))
-      // .parameterType(CANVAS_BIGCOMMERCE_PARAMETER_TYPES,
-      //   compose(bigcommerceEnhancer())),
+          compose(contentfulEnhancer(), contentfulModelCleaner))
+        .parameterType(CANVAS_BIGCOMMERCE_PARAMETER_TYPES,
+          compose(bigcommerceEnhancer())),
       // .parameterType(CANVAS_BIGCOMMERCE_PARAMETER_TYPES,
       //   compose(bigcommerceEnhancer(), bigcommerceModelCleaner)),
       context: {},
